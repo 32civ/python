@@ -9,15 +9,17 @@ que le soliciten y seleccione un numero del 1 al 3
 [3]Digitar su correo electronico
 [4]Salir
 """
-print(menu)
 while True:
+    print(menu)
     op=input("Ingrese el numero de la opcion: ")
     if op=="1":
-        nombre=input("Digite su nombre: ")
-        if nombre.isalpha():
-            print("Su nombre es: ",nombre)
-        else:
-            print("Ingrese un nombre valido")
+        while True:    
+            nombre=input("Digite su nombre: ")
+            if nombre.isalpha():
+                print("Su nombre es: ",nombre)
+                break
+            else:
+                print("Ingrese un nombre valido")
     if op=="2":
         edad=input("Digite su edad: ")
         if edad.isdigit():
